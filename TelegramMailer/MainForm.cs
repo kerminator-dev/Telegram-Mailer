@@ -2,15 +2,21 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using TelegramMailer.Models;
+using TelegramMailer.Models.Logger;
 
 namespace TelegramMailer
 {
     public partial class MainForm : Form
     {
-        Mailer BotMailer;
+        private Mailer BotMailer;
+        private readonly TXTLogger Logger;
+
         public MainForm()
         {
             InitializeComponent();
+
+            Logger = new TXTLogger();
+            TokenTextBox.Select();
         }
 
         private List<long> GetIDs()
@@ -31,20 +37,24 @@ namespace TelegramMailer
 
         private void SendButton_Click(object sender, EventArgs e)
         {
-            if (TokenTextBox.Text != string.Empty  && MessageTextBox.Text != string.Empty && IDsTextBox.Text != string.Empty)
+            if (TokenTextBox.Text == string.Empty || MessageTextBox.Text == string.Empty || IDsTextBox.Text == string.Empty)
             {
-                List<long> IDs = GetIDs();
-                if (IDs.Count > 0)
-                {
-                    BotMailer = new Mailer(TokenTextBox.Text);
-                    BotMailer.SendTextMessage(IDs, MessageTextBox.Text, 500);
-                }
-                else MessageBox.Show("Enter Ids! Count of detected IDs: " + IDs.Count);
+                MessageBox.Show("Enter token, IDs and message text!");
+                return;
             }
-            else
+
+            List<long> IDs = GetIDs();
+
+            if (IDs.Count == 0)
             {
-                MessageBox.Show("Enter token, IDs andmessage  text!");
+                MessageBox.Show("Enter Ids! Count of detected IDs: " + IDs.Count);
+                return;
             }
+
+            // Messaging
+            BotMailer = new Mailer(TokenTextBox.Text, Logger);
+            BotMailer.SendTextMessage(IDs, MessageTextBox.Text, 500);
+
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
@@ -58,6 +68,16 @@ namespace TelegramMailer
         private void MinimizeButton_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void LogsButton_Click(object sender, EventArgs e)
+        {
+            Logger.OpenLogs();
+        }
+
+        private void ClearLogsButton_Click(object sender, EventArgs e)
+        {
+            Logger.ClearLogs();
         }
     }
 }

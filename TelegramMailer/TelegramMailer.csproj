@@ -72,6 +72,9 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Enums\LogTypes.cs" />
+    <Compile Include="Models\Loggers\ILogger.cs" />
+    <Compile Include="Models\Loggers\TXTLogger.cs" />
     <Compile Include="Models\Mailer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
