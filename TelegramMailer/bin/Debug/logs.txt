@@ -1,5 +1,0 @@
-23.10.2021 21:57:28: Logged in as Bot.
-23.10.2021 21:57:28: Trying to send a chat message to 750482148..
-23.10.2021 21:57:28: Message 750482148 successfully sent.
-23.10.2021 21:57:28: Complete 1 of 1.
-

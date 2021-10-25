@@ -8,12 +8,9 @@ namespace TelegramMailer.Models.Logger
 {
     class TXTLogger : ILogger
     {
-        public string FilePath { get; private set; }
+        public string FilePath { get; private set; } = "logs.txt";
 
-        public TXTLogger(string txtFilePath = "logs.txt")
-        {
-            FilePath = txtFilePath;
-        }
+        public TXTLogger() { }
 
         public void OpenLogs()
         {

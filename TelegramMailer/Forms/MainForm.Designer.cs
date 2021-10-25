@@ -57,13 +57,14 @@ namespace TelegramMailer
             | System.Windows.Forms.AnchorStyles.Left)));
             this.IDsTextBox.BackColor = System.Drawing.Color.Transparent;
             this.IDsTextBox.BaseColor = System.Drawing.Color.White;
-            this.IDsTextBox.BorderColor = System.Drawing.Color.Gainsboro;
+            this.IDsTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.IDsTextBox.BorderSize = 3;
             this.IDsTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.IDsTextBox.FocusedBaseColor = System.Drawing.Color.White;
             this.IDsTextBox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(112)))), ((int)(((byte)(252)))));
-            this.IDsTextBox.FocusedForeColor = System.Drawing.Color.DimGray;
-            this.IDsTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.IDsTextBox.ForeColor = System.Drawing.Color.DimGray;
+            this.IDsTextBox.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
+            this.IDsTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.IDsTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
             this.IDsTextBox.Location = new System.Drawing.Point(16, 104);
             this.IDsTextBox.MinimumSize = new System.Drawing.Size(134, 389);
             this.IDsTextBox.Multiline = true;
@@ -81,7 +82,7 @@ namespace TelegramMailer
             // 
             // IDsLabel
             // 
-            this.IDsLabel.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.IDsLabel.Font = new System.Drawing.Font("Raavi", 11F, System.Drawing.FontStyle.Bold);
             this.IDsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
             this.IDsLabel.Location = new System.Drawing.Point(12, 81);
             this.IDsLabel.Name = "IDsLabel";
@@ -89,6 +90,8 @@ namespace TelegramMailer
             this.IDsLabel.TabIndex = 6;
             this.IDsLabel.Text = "Target chat IDs";
             this.IDsLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.IDsLabel.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
+            this.ToolTip.SetToolTip(this.IDsLabel, "List of chat IDs (also user IDs). ");
             // 
             // MessageTextBox
             // 
@@ -97,13 +100,14 @@ namespace TelegramMailer
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MessageTextBox.BackColor = System.Drawing.Color.Transparent;
             this.MessageTextBox.BaseColor = System.Drawing.Color.White;
-            this.MessageTextBox.BorderColor = System.Drawing.Color.Gainsboro;
+            this.MessageTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.MessageTextBox.BorderSize = 3;
             this.MessageTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.MessageTextBox.FocusedBaseColor = System.Drawing.Color.White;
             this.MessageTextBox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(112)))), ((int)(((byte)(252)))));
-            this.MessageTextBox.FocusedForeColor = System.Drawing.Color.DimGray;
-            this.MessageTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.MessageTextBox.ForeColor = System.Drawing.Color.DimGray;
+            this.MessageTextBox.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
+            this.MessageTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.MessageTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
             this.MessageTextBox.Location = new System.Drawing.Point(156, 104);
             this.MessageTextBox.MinimumSize = new System.Drawing.Size(340, 389);
             this.MessageTextBox.Multiline = true;
@@ -120,7 +124,7 @@ namespace TelegramMailer
             // 
             this.MessageLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.MessageLabel.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.MessageLabel.Font = new System.Drawing.Font("Raavi", 11F, System.Drawing.FontStyle.Bold);
             this.MessageLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
             this.MessageLabel.Location = new System.Drawing.Point(152, 82);
             this.MessageLabel.Name = "MessageLabel";
@@ -128,6 +132,8 @@ namespace TelegramMailer
             this.MessageLabel.TabIndex = 8;
             this.MessageLabel.Text = "Message to send";
             this.MessageLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.MessageLabel.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
+            this.ToolTip.SetToolTip(this.MessageLabel, "Message that will be sent to all chat IDs.");
             // 
             // SendButton
             // 
@@ -199,15 +205,15 @@ namespace TelegramMailer
             // NameLabel
             // 
             this.NameLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.NameLabel.Font = new System.Drawing.Font("Raavi", 11F, System.Drawing.FontStyle.Bold);
+            this.NameLabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.NameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
-            this.NameLabel.Location = new System.Drawing.Point(190, 0);
+            this.NameLabel.Location = new System.Drawing.Point(186, 1);
             this.NameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 3, 0);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(118, 23);
+            this.NameLabel.Size = new System.Drawing.Size(135, 23);
             this.NameLabel.TabIndex = 2;
             this.NameLabel.Text = "Telegram mailer";
-            this.NameLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.NameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.NameLabel.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             // 
             // MinimizeButton
@@ -245,7 +251,7 @@ namespace TelegramMailer
             // 
             this.KeyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.KeyLabel.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.KeyLabel.Font = new System.Drawing.Font("Raavi", 11F, System.Drawing.FontStyle.Bold);
             this.KeyLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
             this.KeyLabel.Location = new System.Drawing.Point(12, 27);
             this.KeyLabel.Name = "KeyLabel";
@@ -253,6 +259,8 @@ namespace TelegramMailer
             this.KeyLabel.TabIndex = 13;
             this.KeyLabel.Text = "Bot Token";
             this.KeyLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.KeyLabel.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
+            this.ToolTip.SetToolTip(this.KeyLabel, "Your Bot Key. Example:");
             // 
             // TokenTextBox
             // 
@@ -260,22 +268,22 @@ namespace TelegramMailer
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TokenTextBox.BackColor = System.Drawing.Color.Transparent;
             this.TokenTextBox.BaseColor = System.Drawing.Color.White;
-            this.TokenTextBox.BorderColor = System.Drawing.Color.Gainsboro;
+            this.TokenTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.TokenTextBox.BorderSize = 3;
             this.TokenTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TokenTextBox.FocusedBaseColor = System.Drawing.Color.White;
             this.TokenTextBox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(112)))), ((int)(((byte)(252)))));
-            this.TokenTextBox.FocusedForeColor = System.Drawing.Color.DimGray;
-            this.TokenTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TokenTextBox.ForeColor = System.Drawing.Color.DimGray;
+            this.TokenTextBox.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
+            this.TokenTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.TokenTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(156)))), ((int)(((byte)(156)))));
             this.TokenTextBox.Location = new System.Drawing.Point(12, 48);
             this.TokenTextBox.Name = "TokenTextBox";
             this.TokenTextBox.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.TokenTextBox.PasswordChar = '\0';
+            this.TokenTextBox.PasswordChar = '*';
             this.TokenTextBox.Radius = 12;
             this.TokenTextBox.SelectedText = "";
             this.TokenTextBox.Size = new System.Drawing.Size(484, 30);
             this.TokenTextBox.TabIndex = 1;
-            this.TokenTextBox.Text = "\r\n";
             this.TokenTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ToolTip.SetToolTip(this.TokenTextBox, "Your Bot Key. Example:\r\n1912463298:AAFSC2KufFScXnfsrfd3fhlfRBhGQh5YZaY");
             // 
@@ -317,7 +325,6 @@ namespace TelegramMailer
             this.SettingsButton.CheckedState.Parent = this.SettingsButton;
             this.SettingsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SettingsButton.CustomImages.Parent = this.SettingsButton;
-            this.SettingsButton.Enabled = false;
             this.SettingsButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(112)))), ((int)(((byte)(252)))));
             this.SettingsButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.SettingsButton.ForeColor = System.Drawing.Color.White;
@@ -331,6 +338,7 @@ namespace TelegramMailer
             this.SettingsButton.Size = new System.Drawing.Size(79, 30);
             this.SettingsButton.TabIndex = 17;
             this.SettingsButton.Text = "Settings";
+            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
             // MainForm
             // 
@@ -353,7 +361,6 @@ namespace TelegramMailer
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(508, 541);
             this.Name = "MainForm";
-            this.Text = "Form2";
             this.HeaderPanel.ResumeLayout(false);
             this.HeaderPanel.PerformLayout();
             this.ResumeLayout(false);

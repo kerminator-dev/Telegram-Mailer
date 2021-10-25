@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using TelegramMailer.Forms;
 using TelegramMailer.Models;
 using TelegramMailer.Models.Logger;
 
@@ -9,8 +10,7 @@ namespace TelegramMailer
     public partial class MainForm : Form
     {
         private Mailer BotMailer;
-        private readonly TXTLogger Logger;
-
+        private TXTLogger Logger;
         public MainForm()
         {
             InitializeComponent();
@@ -52,7 +52,13 @@ namespace TelegramMailer
             }
 
             // Messaging
-            BotMailer = new Mailer(TokenTextBox.Text, Logger);
+            Logger = new TXTLogger();
+            BotMailer = new Mailer
+            (
+                token: TokenTextBox.Text,
+                logger: Logger
+            );
+
             BotMailer.SendTextMessage(IDs, MessageTextBox.Text, 500);
 
         }
@@ -78,6 +84,16 @@ namespace TelegramMailer
         private void ClearLogsButton_Click(object sender, EventArgs e)
         {
             Logger.ClearLogs();
+        }
+
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            using (SettingsForm settings = new SettingsForm())
+            {
+                Hide();
+                settings.ShowDialog();
+                Show();
+            }
         }
     }
 }
