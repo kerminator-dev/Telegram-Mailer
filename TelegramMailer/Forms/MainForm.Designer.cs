@@ -333,6 +333,7 @@ namespace TelegramMailer
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.ShadowDecoration.BorderRadius = 14;
             this.SettingsButton.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(112)))), ((int)(((byte)(252)))));
+            this.SettingsButton.ShadowDecoration.Enabled = true;
             this.SettingsButton.ShadowDecoration.Parent = this.SettingsButton;
             this.SettingsButton.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(3, 0, 3, 5);
             this.SettingsButton.Size = new System.Drawing.Size(79, 30);

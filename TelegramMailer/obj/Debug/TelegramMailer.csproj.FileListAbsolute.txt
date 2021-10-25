@@ -38,3 +38,4 @@ C:\Users\Admin\source\repos\TelegramMailer\TelegramMailer\TelegramMailer\bin\Deb
 C:\Users\Admin\source\repos\TelegramMailer\TelegramMailer\TelegramMailer\bin\Debug\Telegram.Bot.xml
 C:\Users\Admin\source\repos\TelegramMailer\TelegramMailer\TelegramMailer\obj\Debug\TelegramMailer.csproj.CopyComplete
 C:\Users\Admin\source\repos\TelegramMailer\TelegramMailer\TelegramMailer\obj\Debug\TelegramMailer.Forms.SettingsForm.resources
+C:\Users\Admin\source\repos\TelegramMailer\TelegramMailer\TelegramMailer\obj\Debug\TelegramMailer.csprojAssemblyReference.cache
