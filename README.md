@@ -4,4 +4,4 @@
 
 ## Overview
 
-A simple mailer for Telegram thath allows you to send messages to a large number of users automatically. Supports logging in .txt format file.
+A simple mailer for Telegram that allows you to send messages to a large number of users automatically. Supports logging in .txt format file.
